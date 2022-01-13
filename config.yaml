@@ -1,0 +1,4 @@
+scratch: "/some/place/in/your/scratch"
+projroot: "/some/place/in/your/home/split_and_count"
+kraken_db: "/tsl/data/krakendb/rice_magna"
+reference_genome: "/tsl/data/sequences/fungi/magnaporthe/ensemble_genome/Magnaporthe_oryzae.MG8.50.cdna.all.fa"

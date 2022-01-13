@@ -1,0 +1,2 @@
+name,timepoint,biorep,samplename,alt_samplename,misc_info,fq1,fq2
+co39_leaf,0,1,co39_leaf_0_1,B1,NA,/path/to/fq1,/path/to/fq2
