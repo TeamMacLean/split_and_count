@@ -35,7 +35,6 @@ then
     -o split_and_count.log \
     --wrap="source snakemake-5.5.3; snakemake -s scripts/counts.snakefile -n" \
     --constraint="intel"
-fi
 elif [ $1 = "dag" ]
 then
     sbatch -J dag \
