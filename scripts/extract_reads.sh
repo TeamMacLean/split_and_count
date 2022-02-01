@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+source python-2.7.10
 source krakentools-1.2
 
 kout=$1
