@@ -17,7 +17,7 @@ This repo contains files that will run `kraken` on the HPC to classify reads int
 
 ### `kraken` step 
 
-The raw reads are compared to a `kraken` database containing Rice and Mo transcript sequences. Each read is classified according to the most likely origin. The classified reads are then separated into files of only Mo reads
+The raw reads are compared to a `kraken` database containing Rice and Mo transcript sequences. Each read is classified according to the most likely origin. The classified reads are then separated into files of only Mo or Os reads as appropriate
 
 ### Summary step 
 
@@ -25,7 +25,7 @@ The number of reads extracted per sample are summarised in results files.
 
 ### `kallisto` step
 
-The Mo reads are put through the `kallisto count` pipeline to generate estimates of transcript abundance in each Mo read file. A single output file is generated for each sample. A count matrix is compiled.
+The Mo reads are put through the `kallisto count` pipeline to generate estimates of transcript abundance in each read file. A single output file is generated for each sample. A count matrix is compiled.
 
 
 ## Running the pipeline
