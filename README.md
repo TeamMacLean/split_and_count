@@ -48,7 +48,8 @@ The pipeline is just a collection of scripts - see the folder `scripts`. Do not 
  * `scratch` is the place in your scratch that you want the intermediate files to go to
  * `projroot` is the place in your home area that you are working from, it should be the place you pulled the repo to
  * `krakendb` is the location of the `kraken` database, the given value is currently correct
- * `reference_genome` is the file of reference sequences that `kallisto` will use, this is currently correct
+ * `reference_genome` is the file of reference sequences that `kallisto` will use, this is currently correct for Mo genes, change it for Os genes (you will need a cultivar specific file).
+ * `tax_id` is the NCBI taxonomy id of the species you want to use, `318829` for Mo, `4530` for Os (either cultivar)
 
  ### `lib/samples_to_files.csv`
 
