@@ -93,7 +93,7 @@ rule extract_reads:
         fq1=temp(config['scratch'] + "{sample}/kraken_extract/extracted_1.fq.gz"),
         fq2=temp(config['scratch'] + "{sample}/kraken_extract/extracted_2.fq.gz")
     params:
-        taxid="318829",
+        taxid=config['tax_id'],
         mem="32G",
         queue="tsl-short"
     threads: 1
