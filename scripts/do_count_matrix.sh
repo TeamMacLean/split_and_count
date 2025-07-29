@@ -21,7 +21,7 @@ if [ -z "$1" ]
 then
     sbatch -J split_and_count \
     -o split_and_count.log \
-    --wrap="source snakemake-5.5.3; snakemake -s scripts/counts.snakefile counts --cluster 'sbatch --partition={params.queue} -c {threads} --mem={params.mem} --constraint="intel" ' -j 20 --latency-wait 60"
+    --wrap="source snakemake-5.5.3; snakemake -s scripts/counts.snakefile counts --cluster 'sbatch --partition={params.queue} -c {threads} --mem={params.mem}' -j 20 --latency-wait 60"
 elif [ $1 = 'unlock' ]
 then
     sbatch -J unlock \
