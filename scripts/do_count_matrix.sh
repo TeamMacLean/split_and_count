@@ -21,26 +21,22 @@ if [ -z "$1" ]
 then
     sbatch -J split_and_count \
     -o split_and_count.log \
-    --wrap="source snakemake-5.5.3; snakemake -s scripts/counts.snakefile counts --cluster 'sbatch --partition={params.queue} -c {threads} --mem={params.mem} --constraint="intel" ' -j 20 --latency-wait 60" \
-    --constraint="intel"
+    --wrap="source snakemake-5.5.3; snakemake -s scripts/counts.snakefile counts --cluster 'sbatch --partition={params.queue} -c {threads} --mem={params.mem} --constraint="intel" ' -j 20 --latency-wait 60"
 elif [ $1 = 'unlock' ]
 then
     sbatch -J unlock \
         -o split_and_count.log \
-        --wrap="source snakemake-5.5.3; snakemake -s scripts/counts.snakefile --unlock" \
-        --constraint="intel"
+        --wrap="source snakemake-5.5.3; snakemake -s scripts/counts.snakefile --unlock" 
 elif [ $1 = "dryrun" ]
 then
     sbatch -J split_and_count \
     -o split_and_count.log \
-    --wrap="source snakemake-5.5.3; snakemake -s scripts/counts.snakefile -n" \
-    --constraint="intel"
+    --wrap="source snakemake-5.5.3; snakemake -s scripts/counts.snakefile -n"
 elif [ $1 = "dag" ]
 then
     sbatch -J dag \
     -o split_and_count.log \
     --wrap="source snakemake-5.5.3; snakemake --dag -s scripts/counts.snakefile  > split_and_count.dot" \
-    --constraint="intel" \
     --partition="tsl-short" \
     --mem="16G"
 elif [ $1 = '-h' ]
