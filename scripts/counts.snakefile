@@ -149,6 +149,7 @@ rule sleuth_files:
         meta="results/run_metadata.txt"
     params:
         mem="16",
-        queue="tsl-short"
+        queue="tsl-short",
+        temp_dir=config['scratch'] + "/tmp/"
     threads: 1
-    shell: "python scripts/make_metadata.py {output.gz} {input} > {output.meta}"
+    shell: "python scripts/make_metadata.py {params.temp_dir} {output.gz} {input} > {output.meta}"
