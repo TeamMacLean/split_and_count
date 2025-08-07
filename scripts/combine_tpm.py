@@ -1,6 +1,7 @@
 #!/usr/env python
 
 import sys
+import os
 from collections import defaultdict
 
 files = sys.argv[1:]
